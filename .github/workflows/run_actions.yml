@@ -1,0 +1,28 @@
+name: run secrets
+
+#run secrets after run-pipeline has runned
+on: 
+  workflow_run:
+    workflows: ["Run tests"]
+    types:
+      - completed
+jobs:
+  notify:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v3
+      - name: Retrieve the secret for IPadres
+        with:
+          CD_SECRET: ${{ secrets.CD_SECRET }}
+        run: |
+          echo $CD_SECRET
+        run: |
+          example-command "$PASSWORD_ROOT" 
+
+      - uses: actions/checkout@v3
+      - name: Retrieve the secret Password
+        with:
+          PASSWORD_ROOT: ${{ secrets.PASSWORD_ROOT" }}
+        run: |
+          example-command $PASSWORD_ROOT
+
