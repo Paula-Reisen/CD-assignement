@@ -24,4 +24,5 @@ jobs:
       - name: PASSWORD_ROOTS
         with: 
           PASSWORD_ROOT: ${{ secrets.PASSWORD_ROOT }}
-          run: example-command "$PASSWORD_ROOT"
+          run: |
+            example-command "$PASSWORD_ROOT"
