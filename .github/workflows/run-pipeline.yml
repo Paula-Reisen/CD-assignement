@@ -18,11 +18,13 @@ jobs:
       - name: Run tests
         run: pytest
       - name: CD_SECRETs
+        uses: actions/secrets
         with: 
           CD_SECRET: ${{ secrets.CD_SECRET }}
           run: |
             example-command "$CD_SECRET"
       - name: PASSWORD_ROOTS
+        uses: actions/secrets
         with: 
           PASSWORD_ROOT: ${{ secrets.PASSWORD_ROOT }}
           run: |
