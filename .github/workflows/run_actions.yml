@@ -16,8 +16,6 @@ jobs:
           CD_SECRET: ${{ secrets.CD_SECRET }}
         run: |
           echo $CD_SECRET
-        run: |
-          example-command "$PASSWORD_ROOT" 
 
       - uses: actions/checkout@v3
       - name: Retrieve the secret Password
