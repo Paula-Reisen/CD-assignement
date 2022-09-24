@@ -19,9 +19,10 @@ jobs:
         run: pytest
   run-secrets:
     runs-on: ubuntu-20.04
-      - name: CD_SECRET
+    steps:
+      - name: CD_SECRETs
         with: CD_SECRET
           super_secret: ${{ secrets.CD_SECRET }}
-      - name: PASSWORD_ROOT
+      - name: PASSWORD_ROOTS
         with: PASSWORD_ROOT
           super_secret: ${{ secrets.PASSWORD_ROOT }}
