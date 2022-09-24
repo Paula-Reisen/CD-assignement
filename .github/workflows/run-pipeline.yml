@@ -20,13 +20,14 @@ jobs:
 
       - shell: bash
       - name: Password action
-        with:
-          PASSWORD_ROOT: ${{ secrets.PASSWORD_ROOT" }}
         run: |
           example-command "$PASSWORD_ROOT" 
+        with:
+          PASSWORD_ROOT: ${{ secrets.PASSWORD_ROOT" }}
       - shell: bash
       - name: IP-adres
-        with:
-          CD_SECRET: ${{ secrets.CD_SECRET }}
         run: |
           example-command "$CD_SECRET"
+        with:
+          CD_SECRET: ${{ secrets.CD_SECRET }}
+        
