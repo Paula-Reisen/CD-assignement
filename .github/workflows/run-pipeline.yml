@@ -17,3 +17,11 @@ jobs:
         run: pip install -r requirements.txt
       - name: Run tests
         run: pytest
+  run-secrets:
+    runs-on: ubuntu-20.04
+      - name: CD_SECRET
+        with: CD_SECRET
+          super_secret: ${{ secrets.CD_SECRET }}
+      - name: PASSWORD_ROOT
+        with: PASSWORD_ROOT
+          super_secret: ${{ secrets.PASSWORD_ROOT }}
