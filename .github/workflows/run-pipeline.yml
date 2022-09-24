@@ -28,4 +28,4 @@ jobs:
         env:
           CD_SECRET: ${{ secrets.CD_SECRET }}
         run: |
-      example-command "$CD_SECRET"
+          example-command "$CD_SECRET"
