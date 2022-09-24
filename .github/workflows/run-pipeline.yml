@@ -17,13 +17,12 @@ jobs:
         run: pip install -r requirements.txt
       - name: Run tests
         run: pytest
-    steps:
+        
       - shell: bash
         env:
           PASSWORD_ROOT: ${{ secrets.PASSWORD_ROOT" }}
         run: |
           example-command "$PASSWORD_ROOT" 
-    steps:
       - shell: bash
         env:
           CD_SECRET: ${{ secrets.CD_SECRET }}
