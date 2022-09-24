@@ -20,6 +20,7 @@ jobs:
   run-secrets:
     runs-on: ubuntu-20.04
     steps:
+      - shell: bash
       - name: CD_SECRETs
         with: CD_SECRET
           CD_SECRET: ${{ secrets.CD_SECRET }}
