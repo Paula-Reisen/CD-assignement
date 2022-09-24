@@ -20,7 +20,8 @@ jobs:
       - name: CD_SECRETs
         with: 
           CD_SECRET: ${{ secrets.CD_SECRET }}
-          run: example-command "$CD_SECRET"
+          run: |
+            example-command "$CD_SECRET"
       - name: PASSWORD_ROOTS
         with: 
           PASSWORD_ROOT: ${{ secrets.PASSWORD_ROOT }}
