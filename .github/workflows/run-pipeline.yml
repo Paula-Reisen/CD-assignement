@@ -22,7 +22,7 @@ jobs:
     steps:
       - name: CD_SECRETs
         with: CD_SECRET
-          super_secret: ${{ secrets.CD_SECRET }}
+          CD_SECRET: ${{ secrets.CD_SECRET }}
       - name: PASSWORD_ROOTS
         with: PASSWORD_ROOT
-          super_secret: ${{ secrets.PASSWORD_ROOT }}
+          PASSWORD_ROOT: ${{ secrets.PASSWORD_ROOT }}
