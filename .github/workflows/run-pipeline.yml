@@ -22,8 +22,8 @@ jobs:
     steps:
       - shell: bash
       - name: CD_SECRETs
-        with: CD_SECRET
+        with: 
           CD_SECRET: ${{ secrets.CD_SECRET }}
       - name: PASSWORD_ROOTS
-        with: PASSWORD_ROOT
+        with: 
           PASSWORD_ROOT: ${{ secrets.PASSWORD_ROOT }}
