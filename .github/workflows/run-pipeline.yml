@@ -17,17 +17,19 @@ jobs:
         run: pip install -r requirements.txt
       - name: Run tests
         run: pytest
-
-      - shell: bash
-      - name: Password action
-        run: |
-          example-command "$PASSWORD_ROOT" 
-        with:
-          PASSWORD_ROOT: ${{ secrets.PASSWORD_ROOT" }}
-      - shell: bash
-      - name: IP-adres
-        run: |
-          example-command "$CD_SECRET"
+    steps:
+      - uses: actions/checkout@v3
+      - name: Retrieve the secret for IPadres
         with:
           CD_SECRET: ${{ secrets.CD_SECRET }}
-        
+        run: |
+          echo $CD_SECRET
+        run: |
+          example-command "$PASSWORD_ROOT" 
+
+      - uses: actions/checkout@v3
+      - name: Retrieve the secret Password
+        with:
+          PASSWORD_ROOT: ${{ secrets.PASSWORD_ROOT" }}
+        run: |
+          example-command $PASSWORD_ROOT
