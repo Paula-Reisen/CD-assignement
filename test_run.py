@@ -8,7 +8,7 @@ def test_main(capsys):
     sys.stdin = io.StringIO("abcdef")
     sys.argv = ["main.py", "f"]
 
-    main.main()
+    main.index
 
     captured = capsys.readouterr()
     assert captured.out == "abcde"
