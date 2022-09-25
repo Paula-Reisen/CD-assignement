@@ -11,5 +11,5 @@ def test_main(capsys):
     main.index
 
     captured = capsys.readouterr()
-    assert captured.out == "abcde"
+    assert captured.out == "abcdef"
     assert captured.err == "1"
