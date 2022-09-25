@@ -1,5 +1,6 @@
 import sys
 import main
+import io
 
 
 def test_main(capsys):
