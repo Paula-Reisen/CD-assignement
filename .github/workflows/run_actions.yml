@@ -1,5 +1,4 @@
-name: Build and Deploy
-
+name: Build and deploy
 #run secrets after run-pipeline has runned
 on: 
   workflow_run:
@@ -11,8 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       -name: deploy Winc app
-      uses: appleboy/ssh-action@v0.1.2.
-      with:
+       uses: appleboy/ssh-action@v0.1.2.
+       with:
         host: ${{secrets.SSH_HOST}}
         key: ${{secrets.SSH_KEY}}
         username: ${{secrets.SSH_USERNAME}}
