@@ -20,3 +20,22 @@ Runs the test and also installs python and pytest in the host. We have chosen ub
 There are two installed secrets, namely:
 * CD_SECRET: Contains IPadres for website cd-assignment
 * PASSWORD_ROOT: Contains password to publish the changes
+
+# problems SSH Keys
+Two problems with ssh keys where
+* knowing I had to login as root on droplet server and generate a public/private key
+* Then the necessary steps I had to take to make the connection with github. 
+By loooking on google i found https://medium.com/swlh/how-to-deploy-your-application-to-digital-ocean-using-github-actions-and-save-up-on-ci-cd-costs-74b7315facc2. This link helped me to get the connection started. 
+
+# problem 2
+I had an issue with getting my gitactions working. 
+* workflow names where incorrect
+* before I found the link above I didn't get the connection working with droplet to update the site. 
+    Fixing the names so the test did run
+    Creating the correct connection with github and adding the right secrets
+
+# problem 3
+I had a problem with the format of the yml file: 
+    * The steps was not in the right place
+    * The syntax wasn't correct
+Try multiple times just to find the right format so it didn't fail on the syntax. 

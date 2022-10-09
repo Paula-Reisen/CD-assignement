@@ -1,2 +1,2 @@
-pytest
-flask
+pytest 20.0.4
+flask  2.2.1
