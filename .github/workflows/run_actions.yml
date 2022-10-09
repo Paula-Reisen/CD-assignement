@@ -12,11 +12,8 @@ jobs:
       - name: deploy Winc app
         uses: appleboy/ssh-action@master
         with:
-          host: ${{secrets.SSH_HOST}}
-          username: ${{secrets.SSH_USERNAME}}
-          password: ${{ secrets.PASSWORD }}
-          script: |
-            mkdir test
-            cd test
-            git clone git@github.com:Paula-Reisen/CD-assignement.git
-            echo 'Deployment succesful to digital ocean'
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.KEY }}
+          script: whoami
+          
