@@ -9,14 +9,14 @@ jobs:
   deploy: 
     runs-on: ubuntu-latest
     steps:
-      -name: deploy Winc app
-      uses: appleboy/ssh-action@v0.1.2.
-      with:
-        host: ${{secrets.SSH_HOST}}
-        key: ${{secrets.SSH_KEY}}
-        username: ${{secrets.SSH_USERNAME}}
-        script: |
-          mkdir test
-          cd test
-          git clone git@github.com:Paula-Reisen/CD-assignement.git
-          echo 'Deployment succesful to digital ocean'
+      - name: deploy Winc app
+        uses: appleboy/ssh-action@v0.1.2.
+        with:
+          host: ${{secrets.SSH_HOST}}
+          key: ${{secrets.SSH_KEY}}
+          username: ${{secrets.SSH_USERNAME}}
+          script: |
+            mkdir test
+            cd test
+            git clone git@github.com:Paula-Reisen/CD-assignement.git
+            echo 'Deployment succesful to digital ocean'
